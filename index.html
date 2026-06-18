@@ -756,75 +756,187 @@
                         <p class="text-sm text-slate-500 dark:text-slate-400">Triggered based on Tier 1 depressive results. Over the last 2 weeks, how often have you been bothered by the following?</p>
                     </div>
 
-                    <div class="space-y-8 max-h-[400px] overflow-y-auto pr-2">
+                    <div class="space-y-8">
                         <!-- Q5 -->
-                        <div class="space-y-4 py-4 border-b border-slate-100 dark:border-slate-855 last:border-0">
-                            <h3 class="text-sm font-bold text-slate-800 dark:text-slate-250 text-center">Q5. Trouble falling or staying asleep, or sleeping too much. <span class="text-indigo-500">*</span></h3>
-                            <div class="flex justify-center items-center gap-4 sm:gap-6 pt-2">
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q5" value="0" class="sr-only"><div class="w-12 h-12 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-sm bg-white circle-node">0</div><span class="text-[10px] text-slate-400 font-medium">Not at all</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q5" value="1" class="sr-only"><div class="w-10 h-10 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-xs bg-white circle-node">1</div><span class="text-[10px] text-slate-400 font-medium">Several</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q5" value="2" class="sr-only"><div class="w-10 h-10 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-xs bg-white circle-node">2</div><span class="text-[10px] text-slate-400 font-medium">Half</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q5" value="3" class="sr-only"><div class="w-12 h-12 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-sm bg-white circle-node">3</div><span class="text-[10px] text-slate-400 font-medium">Nearly</span></label>
+                        <div class="space-y-4 py-4 border-b border-slate-100 dark:border-slate-800/60 last:border-0">
+                            <h3 class="text-sm sm:text-base font-bold text-slate-800 dark:text-slate-200 text-center">Q5. Trouble falling or staying asleep, or sleeping too much. <span class="text-indigo-500">*</span></h3>
+                            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 pt-2">
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q5" value="0" class="sr-only" required>
+                                    <div class="w-12 h-12 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-teal-500 transition-all font-bold text-sm bg-white dark:bg-slate-900 circle-node">0</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Not at all</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q5" value="1" class="sr-only" required>
+                                    <div class="w-10 h-10 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-teal-400 transition-all font-bold text-xs bg-white dark:bg-slate-900 circle-node">1</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Several days</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q5" value="2" class="sr-only" required>
+                                    <div class="w-10 h-10 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-indigo-400 transition-all font-bold text-xs bg-white dark:bg-slate-900 circle-node">2</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Half days</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q5" value="3" class="sr-only" required>
+                                    <div class="w-12 h-12 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-indigo-600 transition-all font-bold text-sm bg-white dark:bg-slate-900 circle-node">3</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Nearly every day</span>
+                                </label>
                             </div>
                         </div>
                         <!-- Q6 -->
-                        <div class="space-y-4 py-4 border-b border-slate-100 dark:border-slate-850 last:border-0">
-                            <h3 class="text-sm font-bold text-slate-800 dark:text-slate-250 text-center">Q6. Feeling tired or having little energy. <span class="text-indigo-500">*</span></h3>
-                            <div class="flex justify-center items-center gap-4 sm:gap-6 pt-2">
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q6" value="0" class="sr-only"><div class="w-12 h-12 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-sm bg-white circle-node">0</div><span class="text-[10px] text-slate-400 font-medium">Not at all</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q6" value="1" class="sr-only"><div class="w-10 h-10 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-xs bg-white circle-node">1</div><span class="text-[10px] text-slate-400 font-medium">Several</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q6" value="2" class="sr-only"><div class="w-10 h-10 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-xs bg-white circle-node">2</div><span class="text-[10px] text-slate-400 font-medium">Half</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q6" value="3" class="sr-only"><div class="w-12 h-12 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-sm bg-white circle-node">3</div><span class="text-[10px] text-slate-400 font-medium">Nearly</span></label>
+                        <div class="space-y-4 py-4 border-b border-slate-100 dark:border-slate-800/60 last:border-0">
+                            <h3 class="text-sm sm:text-base font-bold text-slate-800 dark:text-slate-200 text-center">Q6. Feeling tired or having little energy. <span class="text-indigo-500">*</span></h3>
+                            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 pt-2">
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q6" value="0" class="sr-only" required>
+                                    <div class="w-12 h-12 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-teal-500 transition-all font-bold text-sm bg-white dark:bg-slate-900 circle-node">0</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Not at all</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q6" value="1" class="sr-only" required>
+                                    <div class="w-10 h-10 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-teal-400 transition-all font-bold text-xs bg-white dark:bg-slate-900 circle-node">1</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Several days</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q6" value="2" class="sr-only" required>
+                                    <div class="w-10 h-10 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-indigo-400 transition-all font-bold text-xs bg-white dark:bg-slate-900 circle-node">2</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Half days</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q6" value="3" class="sr-only" required>
+                                    <div class="w-12 h-12 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-indigo-600 transition-all font-bold text-sm bg-white dark:bg-slate-900 circle-node">3</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Nearly every day</span>
+                                </label>
                             </div>
                         </div>
                         <!-- Q7 -->
-                        <div class="space-y-4 py-4 border-b border-slate-100 dark:border-slate-855 last:border-0">
-                            <h3 class="text-sm font-bold text-slate-800 dark:text-slate-255 text-center">Q7. Poor appetite or overeating. <span class="text-indigo-500">*</span></h3>
-                            <div class="flex justify-center items-center gap-4 sm:gap-6 pt-2">
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q7" value="0" class="sr-only"><div class="w-12 h-12 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-sm bg-white circle-node">0</div><span class="text-[10px] text-slate-400 font-medium">Not at all</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q7" value="1" class="sr-only"><div class="w-10 h-10 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-xs bg-white circle-node">1</div><span class="text-[10px] text-slate-400 font-medium">Several</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q7" value="2" class="sr-only"><div class="w-10 h-10 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-xs bg-white circle-node">2</div><span class-[10px] text-slate-400 font-medium">Half</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q7" value="3" class="sr-only"><div class="w-12 h-12 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-sm bg-white circle-node">3</div><span class="text-[10px] text-slate-400 font-medium">Nearly</span></label>
+                        <div class="space-y-4 py-4 border-b border-slate-100 dark:border-slate-800/60 last:border-0">
+                            <h3 class="text-sm sm:text-base font-bold text-slate-800 dark:text-slate-200 text-center">Q7. Poor appetite or overeating. <span class="text-indigo-500">*</span></h3>
+                            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 pt-2">
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q7" value="0" class="sr-only" required>
+                                    <div class="w-12 h-12 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-teal-500 transition-all font-bold text-sm bg-white dark:bg-slate-900 circle-node">0</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Not at all</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q7" value="1" class="sr-only" required>
+                                    <div class="w-10 h-10 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-teal-400 transition-all font-bold text-xs bg-white dark:bg-slate-900 circle-node">1</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Several days</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q7" value="2" class="sr-only" required>
+                                    <div class="w-10 h-10 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-indigo-400 transition-all font-bold text-xs bg-white dark:bg-slate-900 circle-node">2</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Half days</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q7" value="3" class="sr-only" required>
+                                    <div class="w-12 h-12 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-indigo-600 transition-all font-bold text-sm bg-white dark:bg-slate-900 circle-node">3</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Nearly every day</span>
+                                </label>
                             </div>
                         </div>
                         <!-- Q8 -->
-                        <div class="space-y-4 py-4 border-b border-slate-100 dark:border-slate-858 last:border-0">
-                            <h3 class="text-sm font-bold text-slate-800 dark:text-slate-258 text-center">Q8. Feeling bad about yourself—or that you are a failure. <span class="text-indigo-500">*</span></h3>
-                            <div class="flex justify-center items-center gap-4 sm:gap-6 pt-2">
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q8" value="0" class="sr-only"><div class="w-12 h-12 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-sm bg-white circle-node">0</div><span class="text-[10px] text-slate-400 font-medium">Not at all</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q8" value="1" class="sr-only"><div class="w-10 h-10 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-xs bg-white circle-node">1</div><span class="text-[10px] text-slate-400 font-medium">Several</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q8" value="2" class="sr-only"><div class="w-10 h-10 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-xs bg-white circle-node">2</div><span class="text-[10px] text-slate-400 font-medium">Half</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q8" value="3" class="sr-only"><div class="w-12 h-12 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-sm bg-white circle-node">3</div><span class="text-[10px] text-slate-400 font-medium">Nearly</span></label>
+                        <div class="space-y-4 py-4 border-b border-slate-100 dark:border-slate-800/60 last:border-0">
+                            <h3 class="text-sm sm:text-base font-bold text-slate-800 dark:text-slate-200 text-center">Q8. Feeling bad about yourself—or that you are a failure. <span class="text-indigo-500">*</span></h3>
+                            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 pt-2">
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q8" value="0" class="sr-only" required>
+                                    <div class="w-12 h-12 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-teal-500 transition-all font-bold text-sm bg-white dark:bg-slate-900 circle-node">0</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Not at all</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q8" value="1" class="sr-only" required>
+                                    <div class="w-10 h-10 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-teal-400 transition-all font-bold text-xs bg-white dark:bg-slate-900 circle-node">1</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Several days</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q8" value="2" class="sr-only" required>
+                                    <div class="w-10 h-10 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-indigo-400 transition-all font-bold text-xs bg-white dark:bg-slate-900 circle-node">2</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Half days</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q8" value="3" class="sr-only" required>
+                                    <div class="w-12 h-12 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-indigo-600 transition-all font-bold text-sm bg-white dark:bg-slate-900 circle-node">3</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Nearly every day</span>
+                                </label>
                             </div>
                         </div>
                         <!-- Q9 -->
-                        <div class="space-y-4 py-4 border-b border-slate-100 dark:border-slate-860 last:border-0">
-                            <h3 class="text-sm font-bold text-slate-800 dark:text-slate-260 text-center">Q9. Trouble concentrating on things. <span class="text-indigo-500">*</span></h3>
-                            <div class="flex justify-center items-center gap-4 sm:gap-6 pt-2">
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q9" value="0" class="sr-only"><div class="w-12 h-12 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-sm bg-white circle-node">0</div><span class="text-[10px] text-slate-400 font-medium">Not at all</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q9" value="1" class="sr-only"><div class="w-10 h-10 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-xs bg-white circle-node">1</div><span class="text-[10px] text-slate-400 font-medium">Several</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q9" value="2" class="sr-only"><div class="w-10 h-10 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-xs bg-white circle-node">2</div><span class="text-[10px] text-slate-400 font-medium">Half</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q9" value="3" class="sr-only"><div class="w-12 h-12 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-sm bg-white circle-node">3</div><span class="text-[10px] text-slate-400 font-medium">Nearly</span></label>
+                        <div class="space-y-4 py-4 border-b border-slate-100 dark:border-slate-800/60 last:border-0">
+                            <h3 class="text-sm sm:text-base font-bold text-slate-800 dark:text-slate-200 text-center">Q9. Trouble concentrating on things. <span class="text-indigo-500">*</span></h3>
+                            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 pt-2">
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q9" value="0" class="sr-only" required>
+                                    <div class="w-12 h-12 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-teal-500 transition-all font-bold text-sm bg-white dark:bg-slate-900 circle-node">0</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Not at all</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q9" value="1" class="sr-only" required>
+                                    <div class="w-10 h-10 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-teal-400 transition-all font-bold text-xs bg-white dark:bg-slate-900 circle-node">1</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Several days</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q9" value="2" class="sr-only" required>
+                                    <div class="w-10 h-10 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-indigo-400 transition-all font-bold text-xs bg-white dark:bg-slate-900 circle-node">2</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Half days</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q9" value="3" class="sr-only" required>
+                                    <div class="w-12 h-12 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-indigo-600 transition-all font-bold text-sm bg-white dark:bg-slate-900 circle-node">3</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Nearly every day</span>
+                                </label>
                             </div>
                         </div>
                         <!-- Q10 -->
-                        <div class="space-y-4 py-4 border-b border-slate-100 dark:border-slate-860 last:border-0">
-                            <h3 class="text-sm font-bold text-slate-800 dark:text-slate-260 text-center">Q10. Moving or speaking slowly, or being overly fidgety. <span class="text-indigo-500">*</span></h3>
-                            <div class="flex justify-center items-center gap-4 sm:gap-6 pt-2">
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q10" value="0" class="sr-only"><div class="w-12 h-12 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-sm bg-white circle-node">0</div><span class="text-[10px] text-slate-400 font-medium">Not at all</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q10" value="1" class="sr-only"><div class="w-10 h-10 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-xs bg-white circle-node">1</div><span class="text-[10px] text-slate-400 font-medium">Several</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q10" value="2" class="sr-only"><div class="w-10 h-10 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-xs bg-white circle-node">2</div><span class="text-[10px] text-slate-400 font-medium">Half</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q10" value="3" class="sr-only"><div class="w-12 h-12 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-sm bg-white circle-node">3</div><span class="text-[10px] text-slate-400 font-medium">Nearly</span></label>
+                        <div class="space-y-4 py-4 border-b border-slate-100 dark:border-slate-800/60 last:border-0">
+                            <h3 class="text-sm sm:text-base font-bold text-slate-800 dark:text-slate-200 text-center">Q10. Moving or speaking slowly, or being overly fidgety. <span class="text-indigo-500">*</span></h3>
+                            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 pt-2">
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q10" value="0" class="sr-only" required>
+                                    <div class="w-12 h-12 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-teal-500 transition-all font-bold text-sm bg-white dark:bg-slate-900 circle-node">0</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Not at all</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q10" value="1" class="sr-only" required>
+                                    <div class="w-10 h-10 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-teal-400 transition-all font-bold text-xs bg-white dark:bg-slate-900 circle-node">1</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Several days</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q10" value="2" class="sr-only" required>
+                                    <div class="w-10 h-10 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-indigo-400 transition-all font-bold text-xs bg-white dark:bg-slate-900 circle-node">2</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Half days</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q10" value="3" class="sr-only" required>
+                                    <div class="w-12 h-12 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-indigo-600 transition-all font-bold text-sm bg-white dark:bg-slate-900 circle-node">3</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Nearly every day</span>
+                                </label>
                             </div>
                         </div>
                         <!-- Q11 -->
                         <div class="space-y-4 py-4 last:border-0">
-                            <h3 class="text-sm font-bold text-slate-800 dark:text-slate-260 text-center">Q11. Thoughts that you would be better off dead or hurting yourself. <span class="text-indigo-500">*</span></h3>
-                            <div class="flex justify-center items-center gap-4 sm:gap-6 pt-2">
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q11" value="0" class="sr-only"><div class="w-12 h-12 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-sm bg-white circle-node">0</div><span class="text-[10px] text-slate-400 font-medium">Not at all</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q11" value="1" class="sr-only"><div class="w-10 h-10 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-xs bg-white circle-node">1</div><span class="text-[10px] text-slate-400 font-medium">Several</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q11" value="2" class="sr-only"><div class="w-10 h-10 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-xs bg-white circle-node">2</div><span class="text-[10px] text-slate-400 font-medium">Half</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q11" value="3" class="sr-only"><div class="w-12 h-12 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-sm bg-white circle-node">3</div><span class="text-[10px] text-slate-400 font-medium">Nearly</span></label>
+                            <h3 class="text-sm sm:text-base font-bold text-slate-800 dark:text-slate-200 text-center">Q11. Thoughts that you would be better off dead or hurting yourself. <span class="text-indigo-500">*</span></h3>
+                            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 pt-2">
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q11" value="0" class="sr-only" required>
+                                    <div class="w-12 h-12 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-teal-500 transition-all font-bold text-sm bg-white dark:bg-slate-900 circle-node">0</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Not at all</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q11" value="1" class="sr-only" required>
+                                    <div class="w-10 h-10 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-teal-400 transition-all font-bold text-xs bg-white dark:bg-slate-900 circle-node">1</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Several days</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q11" value="2" class="sr-only" required>
+                                    <div class="w-10 h-10 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-indigo-400 transition-all font-bold text-xs bg-white dark:bg-slate-900 circle-node">2</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Half days</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q11" value="3" class="sr-only" required>
+                                    <div class="w-12 h-12 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-indigo-600 transition-all font-bold text-sm bg-white dark:bg-slate-900 circle-node">3</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Nearly every day</span>
+                                </label>
                             </div>
                         </div>
                     </div>
@@ -838,55 +950,135 @@
                         <p class="text-sm text-slate-500 dark:text-slate-400">Triggered based on Tier 1 anxiety screening results. Over the last 2 weeks, how often have you been bothered by the following?</p>
                     </div>
 
-                    <div class="space-y-8 max-h-[400px] overflow-y-auto pr-2">
+                    <div class="space-y-8">
                         <!-- Q12 -->
-                        <div class="space-y-4 py-4 border-b border-slate-100 dark:border-slate-850 last:border-0">
-                            <h3 class="text-sm font-bold text-slate-800 dark:text-slate-250 text-center">Q12. Worrying too much about different things. <span class="text-indigo-500">*</span></h3>
-                            <div class="flex justify-center items-center gap-4 sm:gap-6 pt-2">
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q12" value="0" class="sr-only"><div class="w-12 h-12 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-sm bg-white circle-node">0</div><span class="text-[10px] text-slate-400 font-medium">Not at all</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q12" value="1" class="sr-only"><div class="w-10 h-10 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-xs bg-white circle-node">1</div><span class="text-[10px] text-slate-400 font-medium">Several</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q12" value="2" class="sr-only"><div class="w-10 h-10 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-xs bg-white circle-node">2</div><span class="text-[10px] text-slate-400 font-medium">Half</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q12" value="3" class="sr-only"><div class="w-12 h-12 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-sm bg-white circle-node">3</div><span class="text-[10px] text-slate-400 font-medium">Nearly</span></label>
+                        <div class="space-y-4 py-4 border-b border-slate-100 dark:border-slate-800/60 last:border-0">
+                            <h3 class="text-sm sm:text-base font-bold text-slate-800 dark:text-slate-200 text-center">Q12. Worrying too much about different things. <span class="text-indigo-500">*</span></h3>
+                            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 pt-2">
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q12" value="0" class="sr-only" required>
+                                    <div class="w-12 h-12 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-teal-500 transition-all font-bold text-sm bg-white dark:bg-slate-900 circle-node">0</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Not at all</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q12" value="1" class="sr-only" required>
+                                    <div class="w-10 h-10 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-teal-400 transition-all font-bold text-xs bg-white dark:bg-slate-900 circle-node">1</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Several days</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q12" value="2" class="sr-only" required>
+                                    <div class="w-10 h-10 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-indigo-400 transition-all font-bold text-xs bg-white dark:bg-slate-900 circle-node">2</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Half days</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q12" value="3" class="sr-only" required>
+                                    <div class="w-12 h-12 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-indigo-600 transition-all font-bold text-sm bg-white dark:bg-slate-900 circle-node">3</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Nearly every day</span>
+                                </label>
                             </div>
                         </div>
                         <!-- Q13 -->
-                        <div class="space-y-4 py-4 border-b border-slate-100 dark:border-slate-850 last:border-0">
-                            <h3 class="text-sm font-bold text-slate-800 dark:text-slate-250 text-center">Q13. Trouble relaxing. <span class="text-indigo-500">*</span></h3>
-                            <div class="flex justify-center items-center gap-4 sm:gap-6 pt-2">
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q13" value="0" class="sr-only"><div class="w-12 h-12 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-sm bg-white circle-node">0</div><span class="text-[10px] text-slate-400 font-medium">Not at all</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q13" value="1" class="sr-only"><div class="w-10 h-10 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-xs bg-white circle-node">1</div><span class="text-[10px] text-slate-400 font-medium">Several</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q13" value="2" class="sr-only"><div class="w-10 h-10 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-xs bg-white circle-node">2</div><span class="text-[10px] text-slate-400 font-medium">Half</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q13" value="3" class="sr-only"><div class="w-12 h-12 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-sm bg-white circle-node">3</div><span class="text-[10px] text-slate-400 font-medium">Nearly</span></label>
+                        <div class="space-y-4 py-4 border-b border-slate-100 dark:border-slate-800/60 last:border-0">
+                            <h3 class="text-sm sm:text-base font-bold text-slate-800 dark:text-slate-200 text-center">Q13. Trouble relaxing. <span class="text-indigo-500">*</span></h3>
+                            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 pt-2">
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q13" value="0" class="sr-only" required>
+                                    <div class="w-12 h-12 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-teal-500 transition-all font-bold text-sm bg-white dark:bg-slate-900 circle-node">0</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Not at all</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q13" value="1" class="sr-only" required>
+                                    <div class="w-10 h-10 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-teal-400 transition-all font-bold text-xs bg-white dark:bg-slate-900 circle-node">1</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Several days</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q13" value="2" class="sr-only" required>
+                                    <div class="w-10 h-10 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-indigo-400 transition-all font-bold text-xs bg-white dark:bg-slate-900 circle-node">2</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Half days</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q13" value="3" class="sr-only" required>
+                                    <div class="w-12 h-12 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-indigo-600 transition-all font-bold text-sm bg-white dark:bg-slate-900 circle-node">3</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Nearly every day</span>
+                                </label>
                             </div>
                         </div>
                         <!-- Q14 -->
-                        <div class="space-y-4 py-4 border-b border-slate-100 dark:border-slate-850 last:border-0">
-                            <h3 class="text-sm font-bold text-slate-800 dark:text-slate-250 text-center">Q14. Being so restless that it is hard to sit still. <span class="text-indigo-500">*</span></h3>
-                            <div class="flex justify-center items-center gap-4 sm:gap-6 pt-2">
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q14" value="0" class="sr-only"><div class="w-12 h-12 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-sm bg-white circle-node">0</div><span class="text-[10px] text-slate-400 font-medium">Not at all</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q14" value="1" class="sr-only"><div class="w-10 h-10 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-xs bg-white circle-node">1</div><span class="text-[10px] text-slate-400 font-medium">Several</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q14" value="2" class="sr-only"><div class="w-10 h-10 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-xs bg-white circle-node">2</div><span class="text-[10px] text-slate-400 font-medium">Half</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q14" value="3" class="sr-only"><div class="w-12 h-12 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-sm bg-white circle-node">3</div><span class="text-[10px] text-slate-400 font-medium">Nearly</span></label>
+                        <div class="space-y-4 py-4 border-b border-slate-100 dark:border-slate-800/60 last:border-0">
+                            <h3 class="text-sm sm:text-base font-bold text-slate-800 dark:text-slate-200 text-center">Q14. Being so restless that it is hard to sit still. <span class="text-indigo-500">*</span></h3>
+                            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 pt-2">
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q14" value="0" class="sr-only" required>
+                                    <div class="w-12 h-12 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-teal-500 transition-all font-bold text-sm bg-white dark:bg-slate-900 circle-node">0</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Not at all</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q14" value="1" class="sr-only" required>
+                                    <div class="w-10 h-10 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-teal-400 transition-all font-bold text-xs bg-white dark:bg-slate-900 circle-node">1</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Several days</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q14" value="2" class="sr-only" required>
+                                    <div class="w-10 h-10 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-indigo-400 transition-all font-bold text-xs bg-white dark:bg-slate-900 circle-node">2</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Half days</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q14" value="3" class="sr-only" required>
+                                    <div class="w-12 h-12 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-indigo-600 transition-all font-bold text-sm bg-white dark:bg-slate-900 circle-node">3</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Nearly every day</span>
+                                </label>
                             </div>
                         </div>
                         <!-- Q15 -->
-                        <div class="space-y-4 py-4 border-b border-slate-100 dark:border-slate-850 last:border-0">
-                            <h3 class="text-sm font-bold text-slate-800 dark:text-slate-250 text-center">Q15. Becoming easily annoyed or irritable. <span class="text-indigo-500">*</span></h3>
-                            <div class="flex justify-center items-center gap-4 sm:gap-6 pt-2">
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q15" value="0" class="sr-only"><div class="w-12 h-12 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-sm bg-white circle-node">0</div><span class="text-[10px] text-slate-400 font-medium">Not at all</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q15" value="1" class="sr-only"><div class="w-10 h-10 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-xs bg-white circle-node">1</div><span class="text-[10px] text-slate-400 font-medium">Several</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q15" value="2" class="sr-only"><div class="w-10 h-10 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-xs bg-white circle-node">2</div><span class="text-[10px] text-slate-400 font-medium">Half</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q15" value="3" class="sr-only"><div class="w-12 h-12 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-sm bg-white circle-node">3</div><span class="text-[10px] text-slate-400 font-medium">Nearly</span></label>
+                        <div class="space-y-4 py-4 border-b border-slate-100 dark:border-slate-800/60 last:border-0">
+                            <h3 class="text-sm sm:text-base font-bold text-slate-800 dark:text-slate-200 text-center">Q15. Becoming easily annoyed or irritable. <span class="text-indigo-500">*</span></h3>
+                            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 pt-2">
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q15" value="0" class="sr-only" required>
+                                    <div class="w-12 h-12 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-teal-500 transition-all font-bold text-sm bg-white dark:bg-slate-900 circle-node">0</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Not at all</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q15" value="1" class="sr-only" required>
+                                    <div class="w-10 h-10 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-teal-400 transition-all font-bold text-xs bg-white dark:bg-slate-900 circle-node">1</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Several days</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q15" value="2" class="sr-only" required>
+                                    <div class="w-10 h-10 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-indigo-400 transition-all font-bold text-xs bg-white dark:bg-slate-900 circle-node">2</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Half days</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q15" value="3" class="sr-only" required>
+                                    <div class="w-12 h-12 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-indigo-600 transition-all font-bold text-sm bg-white dark:bg-slate-900 circle-node">3</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Nearly every day</span>
+                                </label>
                             </div>
                         </div>
                         <!-- Q16 -->
                         <div class="space-y-4 py-4 last:border-0">
-                            <h3 class="text-sm font-bold text-slate-800 dark:text-slate-250 text-center">Q16. Feeling afraid as if something awful might happen. <span class="text-indigo-500">*</span></h3>
-                            <div class="flex justify-center items-center gap-4 sm:gap-6 pt-2">
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q16" value="0" class="sr-only"><div class="w-12 h-12 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-sm bg-white circle-node">0</div><span class="text-[10px] text-slate-400 font-medium">Not at all</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q16" value="1" class="sr-only"><div class="w-10 h-10 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-xs bg-white circle-node">1</div><span class="text-[10px] text-slate-400 font-medium">Several</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q16" value="2" class="sr-only"><div class="w-10 h-10 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-xs bg-white circle-node">2</div><span class="text-[10px] text-slate-400 font-medium">Half</span></label>
-                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group"><input type="radio" name="q16" value="3" class="sr-only"><div class="w-12 h-12 rounded-full border-3 border-slate-200 flex items-center justify-center text-slate-400 transition-all font-bold text-sm bg-white circle-node">3</div><span class="text-[10px] text-slate-400 font-medium">Nearly</span></label>
+                            <h3 class="text-sm sm:text-base font-bold text-slate-800 dark:text-slate-200 text-center">Q16. Feeling afraid as if something awful might happen. <span class="text-indigo-500">*</span></h3>
+                            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 pt-2">
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q16" value="0" class="sr-only" required>
+                                    <div class="w-12 h-12 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-teal-500 transition-all font-bold text-sm bg-white dark:bg-slate-900 circle-node">0</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Not at all</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q16" value="1" class="sr-only" required>
+                                    <div class="w-10 h-10 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-teal-400 transition-all font-bold text-xs bg-white dark:bg-slate-900 circle-node">1</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Several days</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q16" value="2" class="sr-only" required>
+                                    <div class="w-10 h-10 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-indigo-400 transition-all font-bold text-xs bg-white dark:bg-slate-900 circle-node">2</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Half days</span>
+                                </label>
+                                <label class="flex flex-col items-center gap-1.5 cursor-pointer group">
+                                    <input type="radio" name="q16" value="3" class="sr-only" required>
+                                    <div class="w-12 h-12 rounded-full border-3 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 group-hover:border-indigo-600 transition-all font-bold text-sm bg-white dark:bg-slate-900 circle-node">3</div>
+                                    <span class="text-[10px] text-slate-400 text-center font-medium">Nearly every day</span>
+                                </label>
                             </div>
                         </div>
                     </div>
