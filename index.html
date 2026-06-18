@@ -102,146 +102,22 @@
                     <div class="space-y-3 text-center sm:text-left">
                         <span class="text-xs font-bold text-indigo-500 dark:text-indigo-400 uppercase tracking-widest">Section 1: Demographics</span>
                         <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">Tell us about yourself</h2>
-                        <p class="text-sm text-slate-500 dark:text-slate-400">Your background parameters help our clinical research models adjust control factors.</p>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">Please provide your name and contact details to proceed with the clinical survey.</p>
                     </div>
 
                     <div class="space-y-6">
-                        <!-- Age input (15-100) -->
+                        <!-- Full Name input -->
                         <div class="space-y-2">
-                            <label for="age" class="block text-sm font-semibold text-slate-700 dark:text-slate-300">What is your age? <span class="text-indigo-500">*</span></label>
-                            <input type="number" id="age" name="age" min="15" max="100" placeholder="Enter age (15-100)" required
-                                class="w-full max-w-xs px-4 py-3 bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl focus:border-indigo-500 dark:focus:border-indigo-400 focus:outline-none transition text-sm font-medium">
+                            <label for="name" class="block text-sm font-semibold text-slate-700 dark:text-slate-300">Full Name <span class="text-indigo-500">*</span></label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required
+                                class="w-full max-w-md px-4 py-3 bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl focus:border-indigo-500 dark:focus:border-indigo-400 focus:outline-none transition text-sm font-medium">
                         </div>
 
-                        <!-- Gender Card-Style Options -->
+                        <!-- Mobile Number input -->
                         <div class="space-y-2">
-                            <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300">What is your gender? <span class="text-indigo-500">*</span></label>
-                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                                <label class="flex items-center gap-3.5 p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 dark:hover:border-indigo-400 transition-all select-none">
-                                    <input type="radio" name="gender" value="Male" class="sr-only" required>
-                                    <div class="w-5 h-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node">
-                                        <div class="w-2.5 h-2.5 rounded-full bg-indigo-500 dark:bg-indigo-400 hidden inner-dot"></div>
-                                    </div>
-                                    <span class="text-sm font-semibold text-slate-600 dark:text-slate-300">Male</span>
-                                </label>
-                                <label class="flex items-center gap-3.5 p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 dark:hover:border-indigo-400 transition-all select-none">
-                                    <input type="radio" name="gender" value="Female" class="sr-only" required>
-                                    <div class="w-5 h-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node">
-                                        <div class="w-2.5 h-2.5 rounded-full bg-indigo-500 dark:bg-indigo-400 hidden inner-dot"></div>
-                                    </div>
-                                    <span class="text-sm font-semibold text-slate-600 dark:text-slate-300">Female</span>
-                                </label>
-                                <label class="flex items-center gap-3.5 p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 dark:hover:border-indigo-400 transition-all select-none">
-                                    <input type="radio" name="gender" value="Other" class="sr-only" required>
-                                    <div class="w-5 h-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node">
-                                        <div class="w-2.5 h-2.5 rounded-full bg-indigo-500 dark:bg-indigo-400 hidden inner-dot"></div>
-                                    </div>
-                                    <span class="text-sm font-semibold text-slate-600 dark:text-slate-300">Other</span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <!-- Residence Card Options -->
-                        <div class="space-y-2">
-                            <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300">Place of Residence? <span class="text-indigo-500">*</span></label>
-                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                                <label class="flex items-center gap-3.5 p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
-                                    <input type="radio" name="residence" value="Urban" class="sr-only" required>
-                                    <div class="w-5 h-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node"><div class="w-2.5 h-2.5 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
-                                    <span class="text-sm font-semibold text-slate-600">Urban</span>
-                                </label>
-                                <label class="flex items-center gap-3.5 p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
-                                    <input type="radio" name="residence" value="Semi-Urban" class="sr-only" required>
-                                    <div class="w-5 h-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node"><div class="w-2.5 h-2.5 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
-                                    <span class="text-sm font-semibold text-slate-600">Semi-Urban</span>
-                                </label>
-                                <label class="flex items-center gap-3.5 p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
-                                    <input type="radio" name="residence" value="Rural" class="sr-only" required>
-                                    <div class="w-5 h-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node"><div class="w-2.5 h-2.5 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
-                                    <span class="text-sm font-semibold text-slate-600">Rural</span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <!-- Education Level Cards -->
-                        <div class="space-y-2">
-                            <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300">Education Level <span class="text-indigo-500">*</span></label>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                <label class="flex items-center gap-3.5 p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
-                                    <input type="radio" name="education" value="High School or below" class="sr-only" required>
-                                    <div class="w-5 h-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node"><div class="w-2.5 h-2.5 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
-                                    <span class="text-sm font-semibold text-slate-600">High School or below</span>
-                                </label>
-                                <label class="flex items-center gap-3.5 p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
-                                    <input type="radio" name="education" value="Undergraduate" class="sr-only" required>
-                                    <div class="w-5 h-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node"><div class="w-2.5 h-2.5 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
-                                    <span class="text-sm font-semibold text-slate-600">Undergraduate</span>
-                                </label>
-                                <label class="flex items-center gap-3.5 p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
-                                    <input type="radio" name="education" value="Postgraduate" class="sr-only" required>
-                                    <div class="w-5 h-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node"><div class="w-2.5 h-2.5 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
-                                    <span class="text-sm font-semibold text-slate-600">Postgraduate</span>
-                                </label>
-                                <label class="flex items-center gap-3.5 p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
-                                    <input type="radio" name="education" value="Other" class="sr-only" required>
-                                    <div class="w-5 h-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node"><div class="w-2.5 h-2.5 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
-                                    <span class="text-sm font-semibold text-slate-600">Other</span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <!-- Employment Status Cards -->
-                        <div class="space-y-2">
-                            <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300">Employment Status <span class="text-indigo-500">*</span></label>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                <label class="flex items-center gap-3.5 p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
-                                    <input type="radio" name="employment" value="Student" class="sr-only" required>
-                                    <div class="w-5 h-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node"><div class="w-2.5 h-2.5 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
-                                    <span class="text-sm font-semibold text-slate-600">Student</span>
-                                </label>
-                                <label class="flex items-center gap-3.5 p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
-                                    <input type="radio" name="employment" value="Employed" class="sr-only" required>
-                                    <div class="w-5 h-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node"><div class="w-2.5 h-2.5 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
-                                    <span class="text-sm font-semibold text-slate-600">Employed</span>
-                                </label>
-                                <label class="flex items-center gap-3.5 p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
-                                    <input type="radio" name="employment" value="Self-Employed" class="sr-only" required>
-                                    <div class="w-5 h-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node"><div class="w-2.5 h-2.5 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
-                                    <span class="text-sm font-semibold text-slate-600">Self-Employed</span>
-                                </label>
-                                <label class="flex items-center gap-3.5 p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
-                                    <input type="radio" name="employment" value="Unemployed" class="sr-only" required>
-                                    <div class="w-5 h-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node"><div class="w-2.5 h-2.5 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
-                                    <span class="text-sm font-semibold text-slate-600">Unemployed</span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <!-- Marital Status Cards -->
-                        <div class="space-y-2">
-                            <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300">Marital Status <span class="text-indigo-500">*</span></label>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                <label class="flex items-center gap-3.5 p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
-                                    <input type="radio" name="marital" value="Single" class="sr-only" required>
-                                    <div class="w-5 h-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node"><div class="w-2.5 h-2.5 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
-                                    <span class="text-sm font-semibold text-slate-600">Single</span>
-                                </label>
-                                <label class="flex items-center gap-3.5 p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
-                                    <input type="radio" name="marital" value="Married" class="sr-only" required>
-                                    <div class="w-5 h-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node"><div class="w-2.5 h-2.5 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
-                                    <span class="text-sm font-semibold text-slate-600">Married</span>
-                                </label>
-                                <label class="flex items-center gap-3.5 p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
-                                    <input type="radio" name="marital" value="Divorced or Separated" class="sr-only" required>
-                                    <div class="w-5 h-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node"><div class="w-2.5 h-2.5 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
-                                    <span class="text-sm font-semibold text-slate-600">Divorced or Separated</span>
-                                </label>
-                                <label class="flex items-center gap-3.5 p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
-                                    <input type="radio" name="marital" value="Widowed" class="sr-only" required>
-                                    <div class="w-5 h-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node"><div class="w-2.5 h-2.5 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
-                                    <span class="text-sm font-semibold text-slate-600">Widowed</span>
-                                </label>
-                            </div>
+                            <label for="mobile" class="block text-sm font-semibold text-slate-700 dark:text-slate-300">Mobile Number <span class="text-indigo-500">*</span></label>
+                            <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" required pattern="^[0-9\-\+\s]{10,15}$"
+                                class="w-full max-w-md px-4 py-3 bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl focus:border-indigo-500 dark:focus:border-indigo-400 focus:outline-none transition text-sm font-medium">
                         </div>
                     </div>
                 </section>
@@ -255,7 +131,7 @@
                     </div>
 
                     <div class="space-y-6">
-                        <!-- Yes/No/Sometimes Radio Card Grids -->
+                        <!-- Yes/No Questions Grid -->
                         <div class="space-y-4">
                             <!-- Mood swing -->
                             <div class="space-y-2">
@@ -307,72 +183,20 @@
                                     </label>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Ternaries: Loneliness, Aggressive, Nervous breakdown -->
-                        <div class="space-y-4">
-                            <!-- Loneliness -->
+                            <!-- Past Trauma -->
                             <div class="space-y-2">
-                                <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300">Do you frequently feel lonely even when around others? <span class="text-indigo-500">*</span></label>
-                                <div class="grid grid-cols-3 gap-2">
-                                    <label class="flex items-center gap-2.5 p-3 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
-                                        <input type="radio" name="loneliness" value="Yes" class="sr-only" required>
+                                <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300">Have you experienced any past trauma? <span class="text-indigo-500">*</span></label>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <label class="flex items-center gap-3 p-3 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
+                                        <input type="radio" name="past_trauma" value="Yes" class="sr-only" required>
                                         <div class="w-4 h-4 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node"><div class="w-2 h-2 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
-                                        <span class="text-xs font-semibold text-slate-600">Yes</span>
+                                        <span class="text-sm font-semibold text-slate-600">Yes</span>
                                     </label>
-                                    <label class="flex items-center gap-2.5 p-3 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
-                                        <input type="radio" name="loneliness" value="No" class="sr-only" required>
+                                    <label class="flex items-center gap-3 p-3 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
+                                        <input type="radio" name="past_trauma" value="No" class="sr-only" required>
                                         <div class="w-4 h-4 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node"><div class="w-2 h-2 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
-                                        <span class="text-xs font-semibold text-slate-600">No</span>
-                                    </label>
-                                    <label class="flex items-center gap-2.5 p-3 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
-                                        <input type="radio" name="loneliness" value="Sometimes" class="sr-only" required>
-                                        <div class="w-4 h-4 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node"><div class="w-2 h-2 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
-                                        <span class="text-xs font-semibold text-slate-600">Sometimes</span>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <!-- Aggressive Response -->
-                            <div class="space-y-2">
-                                <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300">Do you react aggressively when frustrated? <span class="text-indigo-500">*</span></label>
-                                <div class="grid grid-cols-3 gap-2">
-                                    <label class="flex items-center gap-2.5 p-3 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
-                                        <input type="radio" name="aggressive_response" value="Yes" class="sr-only" required>
-                                        <div class="w-4 h-4 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node"><div class="w-2 h-2 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
-                                        <span class="text-xs font-semibold text-slate-600">Yes</span>
-                                    </label>
-                                    <label class="flex items-center gap-2.5 p-3 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
-                                        <input type="radio" name="aggressive_response" value="No" class="sr-only" required>
-                                        <div class="w-4 h-4 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node"><div class="w-2 h-2 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
-                                        <span class="text-xs font-semibold text-slate-600">No</span>
-                                    </label>
-                                    <label class="flex items-center gap-2.5 p-3 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
-                                        <input type="radio" name="aggressive_response" value="Sometimes" class="sr-only" required>
-                                        <div class="w-4 h-4 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node"><div class="w-2 h-2 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
-                                        <span class="text-xs font-semibold text-slate-600">Sometimes</span>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <!-- Nervous breakdown -->
-                            <div class="space-y-2">
-                                <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300">Do you easily feel nervous under pressure? <span class="text-indigo-500">*</span></label>
-                                <div class="grid grid-cols-3 gap-2">
-                                    <label class="flex items-center gap-2.5 p-3 bg-white dark:bg-slate-950 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
-                                        <input type="radio" name="nervous_breakdown" value="Yes" class="sr-only" required>
-                                        <div class="w-4 h-4 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node"><div class="w-2 h-2 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
-                                        <span class="text-xs font-semibold text-slate-600">Yes</span>
-                                    </label>
-                                    <label class="flex items-center gap-2.5 p-3 bg-white dark:bg-slate-950 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
-                                        <input type="radio" name="nervous_breakdown" value="No" class="sr-only" required>
-                                        <div class="w-4 h-4 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node"><div class="w-2 h-2 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
-                                        <span class="text-xs font-semibold text-slate-600">No</span>
-                                    </label>
-                                    <label class="flex items-center gap-2.5 p-3 bg-white dark:bg-slate-950 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
-                                        <input type="radio" name="nervous_breakdown" value="Sometimes" class="sr-only" required>
-                                        <div class="w-4 h-4 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node"><div class="w-2 h-2 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
-                                        <span class="text-xs font-semibold text-slate-600">Sometimes</span>
+                                        <span class="text-sm font-semibold text-slate-600">No</span>
                                     </label>
                                 </div>
                             </div>
@@ -443,6 +267,28 @@
                             </div>
                         </div>
 
+                        <!-- Social Fear -->
+                        <div class="space-y-2">
+                            <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300">Level of Social Fear? <span class="text-indigo-500">*</span></label>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                <label class="flex items-center gap-3.5 p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
+                                    <input type="radio" name="social_fear" value="High" class="sr-only" required>
+                                    <div class="w-5 h-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node"><div class="w-2.5 h-2.5 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
+                                    <span class="text-sm font-semibold text-slate-600">High</span>
+                                </label>
+                                <label class="flex items-center gap-3.5 p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
+                                    <input type="radio" name="social_fear" value="Moderate" class="sr-only" required>
+                                    <div class="w-5 h-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node"><div class="w-2.5 h-2.5 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
+                                    <span class="text-sm font-semibold text-slate-600">Moderate</span>
+                                </label>
+                                <label class="flex items-center gap-3.5 p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
+                                    <input type="radio" name="social_fear" value="Low" class="sr-only" required>
+                                    <div class="w-5 h-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node"><div class="w-2.5 h-2.5 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
+                                    <span class="text-sm font-semibold text-slate-600">Low</span>
+                                </label>
+                            </div>
+                        </div>
+
                         <!-- Predominant Emotion Choice Cards with Emojis -->
                         <div class="space-y-2">
                             <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300">Predominant Emotion <span class="text-indigo-500">*</span></label>
@@ -471,28 +317,6 @@
                                     <input type="radio" name="predominant_emotion" value="Sad" class="sr-only" required>
                                     <div class="w-4 h-4 rounded-full border border-slate-300 flex items-center justify-center circle-node"><div class="w-2 h-2 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
                                     <span class="text-xs font-semibold text-slate-600 flex items-center"><i class="fa-solid fa-face-sad-tear text-blue-500 mr-1.5 text-sm"></i> Sad</span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <!-- Authority Respect Choice Cards -->
-                        <div class="space-y-2">
-                            <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300">Orientation toward Authority Respect <span class="text-indigo-500">*</span></label>
-                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                                <label class="flex items-center gap-3.5 p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
-                                    <input type="radio" name="authority_respect" value="Respectful" class="sr-only" required>
-                                    <div class="w-5 h-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node"><div class="w-2.5 h-2.5 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
-                                    <span class="text-sm font-semibold text-slate-600">Respectful</span>
-                                </label>
-                                <label class="flex items-center gap-3.5 p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
-                                    <input type="radio" name="authority_respect" value="Neutral" class="sr-only" required>
-                                    <div class="w-5 h-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node"><div class="w-2.5 h-2.5 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
-                                    <span class="text-sm font-semibold text-slate-600">Neutral</span>
-                                </label>
-                                <label class="flex items-center gap-3.5 p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
-                                    <input type="radio" name="authority_respect" value="Rebellious" class="sr-only" required>
-                                    <div class="w-5 h-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node"><div class="w-2.5 h-2.5 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
-                                    <span class="text-sm font-semibold text-slate-600">Rebellious</span>
                                 </label>
                             </div>
                         </div>
@@ -1104,16 +928,7 @@
                             <p class="text-sm text-slate-500 dark:text-slate-400 max-w-md mx-auto">Your responses have been successfully compiled and recorded. We appreciate your participation in this clinical AI study.</p>
                         </div>
 
-                        <!-- Success Payload Box -->
-                        <div class="hidden max-w-md mx-auto bg-slate-50 dark:bg-slate-800/40 rounded-2xl border border-slate-200/50 p-4 text-left space-y-3">
-                            <div class="flex items-center justify-between text-xs font-bold text-slate-400 dark:text-slate-500">
-                                <span>COMPILED RECORD PAYLOAD</span>
-                                <button id="copy-btn" class="text-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400 flex items-center gap-1 font-semibold">
-                                    <i class="fa-regular fa-copy"></i> Copy JSON
-                                </button>
-                            </div>
-                            <pre id="json-output" class="text-[10px] sm:text-xs font-mono text-slate-700 dark:text-slate-300 overflow-x-auto max-h-[200px] select-all leading-normal"></pre>
-                        </div>
+
 
                         <div class="pt-4">
                             <button id="reset-btn" class="px-5 py-2.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-semibold text-xs rounded-xl transition-all border border-slate-200/40">
@@ -1255,18 +1070,21 @@
         // Validate sections
         function isStepValid(stepId) {
             if (stepId === 1) {
-                const ageVal = parseInt(document.getElementById('age').value, 10);
-                if (isNaN(ageVal) || ageVal < 15 || ageVal > 100) return false;
+                const nameInput = document.getElementById('name');
+                const mobileInput = document.getElementById('mobile');
+                if (!nameInput || !mobileInput) return false;
                 
-                const dropdowns = ['gender', 'residence', 'education', 'employment', 'marital'];
-                for (const name of dropdowns) {
-                    if (!document.querySelector(`input[name="${name}"]:checked`)) return false;
-                }
+                const nameVal = nameInput.value.trim();
+                const mobileVal = mobileInput.value.trim();
+                if (nameVal === "") return false;
+                
+                const phoneRegex = /^[0-9\-\+\s]{10,15}$/;
+                if (!phoneRegex.test(mobileVal)) return false;
                 return true;
             }
             if (stepId === 2) {
-                const binaries = ['mood_swing', 'suicidal_thought', 'overthinking', 'loneliness', 'aggressive_response', 'nervous_breakdown', 'sleep_pattern', 'social_interaction', 'predominant_emotion', 'authority_respect'];
-                for (const name of binaries) {
+                const fields = ['mood_swing', 'suicidal_thought', 'overthinking', 'past_trauma', 'sleep_pattern', 'social_interaction', 'social_fear', 'predominant_emotion'];
+                for (const name of fields) {
                     if (!document.querySelector(`input[name="${name}"]:checked`)) return false;
                 }
                 return true;
@@ -1335,6 +1153,9 @@
 
                 toEl.classList.remove('hidden');
                 toEl.classList.add('animate-fade-in');
+
+                // Scroll to top of viewport on transition
+                window.scrollTo({ top: 0, behavior: 'instant' });
 
                 currentStep = toStepId;
                 updateStepUI();
@@ -1460,20 +1281,14 @@
         const loaderState = document.getElementById('loader-state');
         const thankyouState = document.getElementById('thankyou-state');
         const errorState = document.getElementById('error-state');
-        
-        const jsonOutput = document.getElementById('json-output');
         const errorJsonOutput = document.getElementById('error-json-output');
 
         function compilePayload() {
             const payload = {};
             
             // Step 1
-            payload.age = parseInt(document.getElementById('age').value, 10);
-            payload.gender = document.querySelector('input[name="gender"]:checked').value;
-            payload.residence = document.querySelector('input[name="residence"]:checked').value;
-            payload.education = document.querySelector('input[name="education"]:checked').value;
-            payload.employment = document.querySelector('input[name="employment"]:checked').value;
-            payload.marital = document.querySelector('input[name="marital"]:checked').value;
+            payload.name = document.getElementById('name').value.trim();
+            payload.mobile = document.getElementById('mobile').value.trim();
 
             // Step 2
             payload.mood_swing = document.querySelector('input[name="mood_swing"]:checked').value;
@@ -1482,12 +1297,10 @@
             payload.concentration = parseInt(document.getElementById('concentration').value, 10);
             payload.sleep_pattern = document.querySelector('input[name="sleep_pattern"]:checked').value;
             payload.social_interaction = document.querySelector('input[name="social_interaction"]:checked').value;
+            payload.social_fear = document.querySelector('input[name="social_fear"]:checked').value;
             payload.predominant_emotion = document.querySelector('input[name="predominant_emotion"]:checked').value;
             payload.overthinking = document.querySelector('input[name="overthinking"]:checked').value;
-            payload.loneliness = document.querySelector('input[name="loneliness"]:checked').value;
-            payload.aggressive_response = document.querySelector('input[name="aggressive_response"]:checked').value;
-            payload.nervous_breakdown = document.querySelector('input[name="nervous_breakdown"]:checked').value;
-            payload.authority_respect = document.querySelector('input[name="authority_respect"]:checked').value;
+            payload.past_trauma = document.querySelector('input[name="past_trauma"]:checked').value;
 
             // Step 3
             payload.family_structure = document.querySelector('input[name="family_structure"]:checked').value;
@@ -1544,7 +1357,6 @@
                 setTimeout(() => {
                     loaderState.classList.add('hidden');
                     thankyouState.classList.remove('hidden');
-                    jsonOutput.textContent = JSON.stringify(payload, null, 4);
                     progressBar.style.width = "100%";
                     console.log("Survey compiled (SIMULATOR):", payload);
                 }, 1200);
@@ -1561,7 +1373,6 @@
                 .then(() => {
                     loaderState.classList.add('hidden');
                     thankyouState.classList.remove('hidden');
-                    jsonOutput.textContent = JSON.stringify(payload, null, 4);
                     progressBar.style.width = "100%";
                     console.log("Survey submitted successfully");
                 })
@@ -1577,13 +1388,6 @@
 
 
         // Copy clip actions
-        document.getElementById('copy-btn').addEventListener('click', () => {
-            navigator.clipboard.writeText(jsonOutput.textContent).then(() => {
-                const btn = document.getElementById('copy-btn');
-                btn.innerHTML = `<i class="fa-solid fa-check text-emerald-500"></i> Copied!`;
-                setTimeout(() => btn.innerHTML = `<i class="fa-regular fa-copy"></i> Copy JSON`, 2000);
-            });
-        });
 
         document.getElementById('error-copy-btn').addEventListener('click', () => {
             navigator.clipboard.writeText(errorJsonOutput.textContent).then(() => {
