@@ -1286,62 +1286,82 @@
         function compilePayload() {
             const payload = {};
             
-            // Step 1
+            // Name/Mobile (Ignored in ML testing but kept for admin reference)
             payload.name = document.getElementById('name').value.trim();
             payload.mobile = document.getElementById('mobile').value.trim();
 
-            // Step 2
-            payload.mood_swing = document.querySelector('input[name="mood_swing"]:checked').value;
-            payload.optimism = parseInt(document.getElementById('optimism').value, 10);
-            payload.suicidal_thought = document.querySelector('input[name="suicidal_thought"]:checked').value;
-            payload.concentration = parseInt(document.getElementById('concentration').value, 10);
-            payload.sleep_pattern = document.querySelector('input[name="sleep_pattern"]:checked').value;
-            payload.social_interaction = document.querySelector('input[name="social_interaction"]:checked').value;
-            payload.social_fear = document.querySelector('input[name="social_fear"]:checked').value;
-            payload.predominant_emotion = document.querySelector('input[name="predominant_emotion"]:checked').value;
-            payload.overthinking = document.querySelector('input[name="overthinking"]:checked').value;
-            payload.past_trauma = document.querySelector('input[name="past_trauma"]:checked').value;
+            // Step 2 features (Mapped exactly to model columns)
+            payload["Mood Swing"] = document.querySelector('input[name="mood_swing"]:checked').value;
+            payload["Optimism"] = parseInt(document.getElementById('optimism').value, 10);
+            payload["Suicidal Thought"] = document.querySelector('input[name="suicidal_thought"]:checked').value;
+            payload["Concentration"] = parseInt(document.getElementById('concentration').value, 10);
+            payload["Sleep Pattern"] = document.querySelector('input[name="sleep_pattern"]:checked').value;
+            payload["Social Interaction"] = document.querySelector('input[name="social_interaction"]:checked').value;
+            payload["Emotion"] = document.querySelector('input[name="predominant_emotion"]:checked').value;
+            payload["Overthinking"] = document.querySelector('input[name="overthinking"]:checked').value;
+            payload["Social Fear"] = document.querySelector('input[name="social_fear"]:checked').value;
+            payload["Past Trauma"] = document.querySelector('input[name="past_trauma"]:checked').value;
 
-            // Step 3
-            payload.family_structure = document.querySelector('input[name="family_structure"]:checked').value;
-            payload.family_dynamics = document.querySelector('input[name="family_dynamics"]:checked').value;
-            payload.family_conflict = document.querySelector('input[name="family_conflict"]:checked').value;
-            payload.financial_stress = document.querySelector('input[name="financial_stress"]:checked').value;
-            payload.emotional_support = document.querySelector('input[name="emotional_support"]:checked').value;
+            // Step 3 features (Mapped exactly to model columns)
+            payload["Family Structure"] = document.querySelector('input[name="family_structure"]:checked').value;
+            payload["Family Dynamics"] = document.querySelector('input[name="family_dynamics"]:checked').value;
+            payload["Marital & Family Conflict"] = document.querySelector('input[name="family_conflict"]:checked').value;
+            payload["Financial Stress"] = document.querySelector('input[name="financial_stress"]:checked').value;
+            payload["Emotional Support"] = document.querySelector('input[name="emotional_support"]:checked').value;
 
-            // Step 4
-            payload.PHQ9_1 = parseInt(document.querySelector('input[name="q1"]:checked').value, 10);
-            payload.PHQ9_2 = parseInt(document.querySelector('input[name="q2"]:checked').value, 10);
-            payload.GAD7_1 = parseInt(document.querySelector('input[name="q3"]:checked').value, 10);
-            payload.GAD7_2 = parseInt(document.querySelector('input[name="q4"]:checked').value, 10);
+            // Calculate total scores (PHQ-9 and Anxiety-7)
+            const phq9_1 = parseInt(document.querySelector('input[name="q1"]:checked').value, 10);
+            const phq9_2 = parseInt(document.querySelector('input[name="q2"]:checked').value, 10);
+            const gad7_1 = parseInt(document.querySelector('input[name="q3"]:checked').value, 10);
+            const gad7_2 = parseInt(document.querySelector('input[name="q4"]:checked').value, 10);
 
-            // Step 5
             const q5 = document.querySelector('input[name="q5"]:checked');
-            payload.PHQ9_3 = q5 ? parseInt(q5.value, 10) : 0;
+            const phq9_3 = q5 ? parseInt(q5.value, 10) : 0;
             const q6 = document.querySelector('input[name="q6"]:checked');
-            payload.PHQ9_4 = q6 ? parseInt(q6.value, 10) : 0;
+            const phq9_4 = q6 ? parseInt(q6.value, 10) : 0;
             const q7 = document.querySelector('input[name="q7"]:checked');
-            payload.PHQ9_5 = q7 ? parseInt(q7.value, 10) : 0;
+            const phq9_5 = q7 ? parseInt(q7.value, 10) : 0;
             const q8 = document.querySelector('input[name="q8"]:checked');
-            payload.PHQ9_6 = q8 ? parseInt(q8.value, 10) : 0;
+            const phq9_6 = q8 ? parseInt(q8.value, 10) : 0;
             const q9 = document.querySelector('input[name="q9"]:checked');
-            payload.PHQ9_7 = q9 ? parseInt(q9.value, 10) : 0;
+            const phq9_7 = q9 ? parseInt(q9.value, 10) : 0;
             const q10 = document.querySelector('input[name="q10"]:checked');
-            payload.PHQ9_8 = q10 ? parseInt(q10.value, 10) : 0;
+            const phq9_8 = q10 ? parseInt(q10.value, 10) : 0;
             const q11 = document.querySelector('input[name="q11"]:checked');
-            payload.PHQ9_9 = q11 ? parseInt(q11.value, 10) : 0;
+            const phq9_9 = q11 ? parseInt(q11.value, 10) : 0;
 
-            // Step 6
             const q12 = document.querySelector('input[name="q12"]:checked');
-            payload.GAD7_3 = q12 ? parseInt(q12.value, 10) : 0;
+            const gad7_3 = q12 ? parseInt(q12.value, 10) : 0;
             const q13 = document.querySelector('input[name="q13"]:checked');
-            payload.GAD7_4 = q13 ? parseInt(q13.value, 10) : 0;
+            const gad7_4 = q13 ? parseInt(q13.value, 10) : 0;
             const q14 = document.querySelector('input[name="q14"]:checked');
-            payload.GAD7_5 = q14 ? parseInt(q14.value, 10) : 0;
+            const gad7_5 = q14 ? parseInt(q14.value, 10) : 0;
             const q15 = document.querySelector('input[name="q15"]:checked');
-            payload.GAD7_6 = q15 ? parseInt(q15.value, 10) : 0;
+            const gad7_6 = q15 ? parseInt(q15.value, 10) : 0;
             const q16 = document.querySelector('input[name="q16"]:checked');
-            payload.GAD7_7 = q16 ? parseInt(q16.value, 10) : 0;
+            const gad7_7 = q16 ? parseInt(q16.value, 10) : 0;
+
+            payload["PHQ-9 Score"] = phq9_1 + phq9_2 + phq9_3 + phq9_4 + phq9_5 + phq9_6 + phq9_7 + phq9_8 + phq9_9;
+            payload["Anxiety-7 Score"] = gad7_1 + gad7_2 + gad7_3 + gad7_4 + gad7_5 + gad7_6 + gad7_7;
+
+            // Individual item scores for granular diagnostic reference
+            payload["PHQ9_1"] = phq9_1;
+            payload["PHQ9_2"] = phq9_2;
+            payload["PHQ9_3"] = phq9_3;
+            payload["PHQ9_4"] = phq9_4;
+            payload["PHQ9_5"] = phq9_5;
+            payload["PHQ9_6"] = phq9_6;
+            payload["PHQ9_7"] = phq9_7;
+            payload["PHQ9_8"] = phq9_8;
+            payload["PHQ9_9"] = phq9_9;
+
+            payload["GAD7_1"] = gad7_1;
+            payload["GAD7_2"] = gad7_2;
+            payload["GAD7_3"] = gad7_3;
+            payload["GAD7_4"] = gad7_4;
+            payload["GAD7_5"] = gad7_5;
+            payload["GAD7_6"] = gad7_6;
+            payload["GAD7_7"] = gad7_7;
 
             return payload;
         }
