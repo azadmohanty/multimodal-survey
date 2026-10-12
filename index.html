@@ -97,20 +97,8 @@
         <div id="survey-card" class="w-full max-w-2xl bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/80 shadow-xl rounded-[2rem] overflow-hidden transition-all duration-300 p-6 sm:p-12">
             
             <form id="survey-form" onsubmit="event.preventDefault();" class="space-y-8">
-                
-                <!-- STEP 1: Demographics -->
-                <section id="step-1" class="survey-step space-y-8">
-                    <div class="space-y-3 text-center sm:text-left">
-                        <span class="text-xs font-bold text-indigo-500 dark:text-indigo-400 uppercase tracking-widest">Section 1: Demographics</span>
-                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">Tell us about yourself</h2>
-                        <p class="text-sm text-slate-500 dark:text-slate-400">Please provide your name and contact details to proceed with the clinical survey.</p>
-                    </div>
-
-                    <div class="space-y-6"></div>
-                </section>
-
                 <!-- STEP 2: Section A & B (Emotional & Cognitive) -->
-                <section id="step-2" class="survey-step hidden space-y-8">
+                <section id="step-2" class="survey-step space-y-8">
                     <div class="space-y-3 text-center sm:text-left">
                         <span class="text-xs font-bold text-indigo-500 dark:text-indigo-400 uppercase tracking-widest">Section 2: Emotional & Cognitive Profile</span>
                         <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">Emotional & Cognitive Assessment</h2>
@@ -237,4 +225,9 @@
                         <div class="space-y-2">
                             <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300">How would you describe your level of social interaction? <span class="text-indigo-500">*</span></label>
                             <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                                <label class="flex items-center gap-3.5 p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-sl
+                                <label class="flex items-center gap-3.5 p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2xl cursor-pointer hover:border-indigo-500 transition-all select-none">
+                                    <input type="radio" name="social_interaction" value="High" class="sr-only" required>
+                                    <div class="w-5 h-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center circle-node"><div class="w-2.5 h-2.5 rounded-full bg-indigo-500 hidden inner-dot"></div></div>
+                                    <span class="text-sm font-semibold text-slate-600 dark:text-slate-355">High</span>
+                                </label>
+                                <label class="flex items-center gap-3.5 p-4 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-2x
